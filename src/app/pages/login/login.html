@@ -1,0 +1,10 @@
+<section class="login">
+  <form (ngSubmit)="login()">
+    <h2>🔐 Login Gamer</h2>
+
+    <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
+    <input type="password" placeholder="Senha" [(ngModel)]="senha" name="senha" required>
+
+    <button type="submit">Entrar</button>
+  </form>
+</section>

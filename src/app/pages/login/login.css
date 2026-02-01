@@ -1,0 +1,38 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+form {
+  background: rgba(20, 10, 45, 0.95);
+  padding: 30px;
+  border-radius: 14px;
+  width: 320px;
+  border: 1px solid rgba(157,92,255,0.4);
+}
+
+h2 {
+  text-align: center;
+  color: #9d5cff;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(45deg, #5a00ff, #8f5cff);
+  color: white;
+  cursor: pointer;
+}

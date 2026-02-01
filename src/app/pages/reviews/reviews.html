@@ -1,0 +1,9 @@
+<section class="reviews">
+  <h2>⭐ Reviews</h2>
+
+  <div class="review" *ngFor="let r of reviews">
+    <h3>{{ r.game }}</h3>
+    <p>{{ r.texto }}</p>
+    <strong>Nota: {{ r.nota }}/10</strong>
+  </div>
+</section>
