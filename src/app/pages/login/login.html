@@ -1,10 +1,39 @@
 <section class="login">
-  <form (ngSubmit)="login()">
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" novalidate>
     <h2>🔐 Login Gamer</h2>
 
-    <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
-    <input type="password" placeholder="Senha" [(ngModel)]="senha" name="senha" required>
+    <!-- Email -->
+    <input
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="email"
+      name="email"
+      required
+      email
+      #emailInput="ngModel"
+    />
+    <div class="error" *ngIf="emailInput.invalid && emailInput.touched">
+      <small *ngIf="emailInput.errors?.['required']">Email é obrigatório</small>
+      <small *ngIf="emailInput.errors?.['email']">Formato de email inválido</small>
+    </div>
 
-    <button type="submit">Entrar</button>
+    <!-- Senha -->
+    <input
+      type="password"
+      placeholder="Senha"
+      [(ngModel)]="senha"
+      name="senha"
+      required
+      minlength="6"
+      #senhaInput="ngModel"
+    />
+    <div class="error" *ngIf="senhaInput.invalid && senhaInput.touched">
+      <small *ngIf="senhaInput.errors?.['required']">Senha é obrigatória</small>
+      <small *ngIf="senhaInput.errors?.['minlength']">
+        Senha deve ter no mínimo 6 caracteres
+      </small>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">Entrar</button>
   </form>
 </section>

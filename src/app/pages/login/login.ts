@@ -1,20 +1,24 @@
-// src/app/pages/login/login.ts
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // ✅ Importa FormsModule
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
-  standalone: true, // importante se não estiver em um NgModule
+  standalone: true,
   templateUrl: './login.html',
   styleUrls: ['./login.css'],
-  imports: [FormsModule] // ✅ necessário para [(ngModel)]
+  imports: [FormsModule]
 })
 export class LoginComponent {
   email = '';
   senha = '';
 
-  login() {
-    console.log('Login:', this.email, this.senha);
-    alert('Login enviado!');
+  login(loginForm: any) {
+    if (loginForm.valid) {
+      console.log('Login enviado:', this.email, this.senha);
+      alert('Login enviado com sucesso!');
+    } else {
+      console.log('Formulário inválido');
+      alert('Por favor, preencha corretamente todos os campos!');
+    }
   }
 }
