@@ -7,10 +7,11 @@
     <a routerLink="/">Home</a>
     <a routerLink="/games">Games</a>
     <a routerLink="/reviews">Reviews</a>
-    <a routerLink="/about">Sobre</a>
+    <a routerLink="/sobre">Sobre</a>
   </nav>
 
-  <div class="actions">
-    <button class="login-btn">Login</button>
-  </div>
+<div class="actions">
+  <button class="login-btn" [routerLink]="'/login'">Login</button>
+</div>
+
 </header>

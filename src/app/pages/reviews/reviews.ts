@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-reviews',
+  standalone: true, // se não estiver em um módulo
+  imports: [CommonModule],
   templateUrl: './reviews.html',
   styleUrls: ['./reviews.css']
 })
 export class ReviewsComponent {
-
   reviews = [
-    { game: 'Cyber Quest', texto: 'História incrível e gráficos top.', nota: 9 },
-    { game: 'Battle Core', texto: 'Multiplayer muito competitivo.', nota: 8 }
+    { user: 'Anderson', text: 'Ótimo jogo!' },
+    { user: 'Maria', text: 'Gostei muito!' }
   ];
-
 }
