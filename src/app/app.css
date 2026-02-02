@@ -1,129 +1,73 @@
-/* =========================
-   RESET + BASE GAMER
-========================= */
+/* Reset e estilo base*/
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Variáveis de tema gamer */
-:root {
-  --bg-dark: #0b1020;
-  --bg-dark-2: #111a35;
-  --purple: #7b2cff;
-  --purple-glow: #9d5cff;
-  --blue-accent: #1f3cff;
-  --text-main: #e6e9ff;
-}
-
-/* =========================
-   BODY
-========================= */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-
-  background: radial-gradient(circle at top, #1a1f3a, #0b1020 60%);
-  color: var(--text-main);
-  line-height: 1.6;
-}
-
-/* =========================
-   HEADER / MAIN / FOOTER
-========================= */
-
-app-header {
-  width: 100%;
-  min-height: max-content;
-  z-index: 10;
-}
-
-/* Conteúdo principal */
-app-main {
-  flex: 1;
-  min-height: 75vh;
-
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-
-  padding: 2rem;
-
-  background:
-    linear-gradient(180deg, transparent, rgba(123, 44, 255, 0.08));
-}
-
-/* Rodapé */
-app-footer {
-  width: 100%;
-  min-height: max-content;
-}
-
-/* =========================
-   ELEMENTOS GERAIS
-========================= */
-
-h1, h2, h3 {
-  letter-spacing: 1px;
-  text-shadow: 0 0 8px rgba(123, 44, 255, 0.35);
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  border-radius: 8px;
-}
-
-/* Scrollbar gamer (webkit) */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0b1020;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--purple), var(--blue-accent));
-  border-radius: 10px;
-}
-
-/* =========================
-   RESPONSIVIDADE
-========================= */
-
-/* Tablets */
-@media (max-width: 768px) {
-  app-main {
-    justify-content: center;
-    padding: 1rem;
-    min-height: 65vh;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
-}
 
-/* Mobile */
-@media (max-width: 480px) {
   body {
-    line-height: 1.5;
-  }
-
-  app-main {
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    padding: 1rem;
-    min-height: 65vh;
-  }
-}
+    min-height: 100vh;
 
-/* Telas muito pequenas */
-@media (max-width: 320px) {
-  app-main {
-    padding: 0.5rem;
-  }
-}
+    color:#333;
+    line-height: 1.6;
+    }
+
+    app-header{
+      width: 100%;
+      min-height: max-content;
+    }
+
+    /* Conteúdo principal */
+    app-main {
+      flex: 1;
+      min-height: 75vh;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      background-color: var(--background-color);
+    }
+
+    /* Rodapé */
+    app-footer {
+      width: 100%;
+      min-height: max-content;
+    }
+
+    /*media Queries para responsividade */
+
+    /* Tablets e telas menores */
+    @media (max-width: 768px) {
+      aap-main {
+        justify-content: center;
+        padding: 0.5rem;
+        min-height: 60vh; /* Ajuste para dar mais espaço ao conteudo */
+      }
+    }
+
+    /*Dispositivos móveis */
+    @media (max-width: 480px) {
+      body {
+
+        line-height: 1.5; /*Ajuste fino para melhor legibilidade */
+      }
+
+      app-main {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 0.5rem;
+        min-height: 60vh; /*Ajuste para dar mais espaço ao conteudo */
+      }
+    }
+
+  /* Telas muito pequenas (opcional) */
+    @media (max-width: 320px) {
+      app-main {
+        padding: 0.25rem;
+      }
+    }
