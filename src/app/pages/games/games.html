@@ -1,6 +1,49 @@
-<div class="games-container">
-  <div class="card" *ngFor="let game of games">
-    <h3>{{ game.name }}</h3>
-    <p>{{ game.genre }}</p>
-  </div>
+<section class="games">
+  <h1>🎮 The Legend of Zelda: Ocarina of Time</h1>
+
+  <!-- Hero / Imagem principal -->
+  <div class="game-hero">
+  <img src="assets/imagens/transferir.jpeg" alt="Ocarina of Time">
 </div>
+
+
+  <!-- Descrição -->
+  <div class="game-description">
+    <p>
+      <strong>The Legend of Zelda: Ocarina of Time</strong> é um dos jogos mais icônicos da história dos videogames, lançado em 1998 para o Nintendo 64. 
+      Neste épico de ação e aventura, você controla <em>Link</em>, o herói destinado a salvar o reino de Hyrule das forças malignas de Ganondorf.
+    </p>
+    <p>
+      Com um mundo vasto para explorar, quebra-cabeças engenhosos, dungeons desafiadoras e uma história envolvente, 
+      Ocarina of Time é considerado um marco no gênero de RPG/Aventura.
+    </p>
+  </div>
+
+  <!-- Informações do jogo -->
+  <div class="game-info">
+    <h2>Detalhes do jogo</h2>
+    <ul>
+      <li><strong>Plataforma:</strong> Nintendo 64, Virtual Console</li>
+      <li><strong>Gênero:</strong> Ação / Aventura</li>
+      <li><strong>Lançamento:</strong> 21 de novembro de 1998</li>
+      <li><strong>Desenvolvedora:</strong> Nintendo EAD</li>
+      <li><strong>Nota média:</strong> 99/100 (Metacritic)</li>
+    </ul>
+  </div>
+
+  <!-- Trailer / vídeo -->
+  <div class="game-video">
+    <h2>Trailer oficial</h2>
+    <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/1rPxiXXxftE" 
+            title="Trailer Ocarina of Time" frameborder="0" 
+            allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Botão de ação -->
+  <div class="game-actions">
+  <button class="btn" (click)="goToreviews()">Ver Reviews</button>
+</div>
+
+</section>

@@ -1,18 +1,67 @@
 .reviews {
-  max-width: 800px;
-  margin: auto;
+  max-width: 900px;         /* largura total da seção */
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
 }
 
 .reviews h2 {
   text-align: center;
   color: #9d5cff;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(157, 92, 255, 0.7);
 }
 
 .review {
-  background: rgba(18, 12, 40, 0.9);
-  padding: 18px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  border-left: 4px solid #8f5cff;
+  background: rgba(18, 12, 40, 0.95);
+  padding: 30px 36px;       /* aumenta o tamanho do card */
+  border-radius: 16px;
+  margin-bottom: 30px;       /* mais espaçamento entre cards */
+  border-left: 8px solid #8f5cff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.7); /* sombra mais forte */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.review:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8);
+}
+
+.review h3, .review h4 {
+  margin: 0 0 12px 0;
+  color: #fff;              /* título branco */
+  font-size: 1.6rem;        /* título maior */
+}
+
+.review p {
+  margin: 0;
+  line-height: 1.8;
+  color: #fff;
+  font-size: 1.2rem;        /* texto maior e legível */
+}
+
+.review .rating {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #9d5cff;
+  text-shadow: 0 0 6px rgba(157, 92, 255, 0.5);
+  font-size: 1.3rem;
+}
+
+.review button {
+  margin-top: 14px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(45deg, #5a00ff, #8f5cff);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+.review button:hover {
+  background: linear-gradient(45deg, #8f5cff, #5a00ff);
 }

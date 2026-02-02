@@ -11,9 +11,10 @@
       required
       email
       #emailInput="ngModel"
+      [class.invalid]="emailInput.invalid && emailInput.touched"
     />
     <div class="error" *ngIf="emailInput.invalid && emailInput.touched">
-      <small *ngIf="emailInput.errors?.['required']">Email é obrigatório</small>
+      <small *ngIf="emailInput.errors?.['required']">Campo obrigatório</small>
       <small *ngIf="emailInput.errors?.['email']">Formato de email inválido</small>
     </div>
 
@@ -26,9 +27,10 @@
       required
       minlength="6"
       #senhaInput="ngModel"
+      [class.invalid]="senhaInput.invalid && senhaInput.touched"
     />
     <div class="error" *ngIf="senhaInput.invalid && senhaInput.touched">
-      <small *ngIf="senhaInput.errors?.['required']">Senha é obrigatória</small>
+      <small *ngIf="senhaInput.errors?.['required']">Campo obrigatório</small>
       <small *ngIf="senhaInput.errors?.['minlength']">
         Senha deve ter no mínimo 6 caracteres
       </small>

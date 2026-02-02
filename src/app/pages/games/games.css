@@ -1,28 +1,65 @@
-.games h2 {
+.games {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  color: #fff;
+}
+
+.games h1 {
   text-align: center;
-  margin: 30px 0;
   color: #9d5cff;
+  margin-bottom: 20px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+.game-hero img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
-.card {
-  background: rgba(20, 10, 45, 0.8);
-  border: 1px solid rgba(157,92,255,0.3);
+.game-description p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.game-info {
+  background: rgba(20, 10, 45, 0.95);
   padding: 20px;
   border-radius: 12px;
-  transition: 0.25s;
+  margin: 20px 0;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 18px rgba(157,92,255,0.4);
+.game-info h2 {
+  color: #9d5cff;
+  margin-bottom: 10px;
 }
 
-.card h3 {
-  color: #cfd6ff;
+.game-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.game-info li {
+  margin-bottom: 6px;
+}
+
+.game-video {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.game-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.game-actions .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #5a00ff, #8f5cff);
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
 }
