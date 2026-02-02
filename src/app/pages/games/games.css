@@ -1,79 +1,68 @@
 /* =========================
-   Container principal
+   CONTAINER PRINCIPAL
 ========================= */
 
 .games {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 28px;
+  padding: 32px;
   color: #ffffff;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 /* =========================
-   Título
+   TÍTULO
 ========================= */
 
 .games h1 {
   text-align: center;
   color: #9d5cff;
   margin-bottom: 28px;
-  font-size: 2.3rem;
-  text-shadow: 0 0 8px rgba(157, 92, 255, 0.5);
+  font-size: 32px;
 }
 
-
 /* =========================
-   Imagem principal
+   HERO IMAGE
 ========================= */
 
 .game-hero {
-  width: 100%;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 }
 
 .game-hero img {
   width: 100%;
-  height: auto;
-  border-radius: 16px;
-  object-fit: cover;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+  border-radius: 14px;
+  display: block;
 }
 
-
 /* =========================
-   Descrição
+   DESCRIÇÃO
 ========================= */
 
 .game-description {
-  font-size: 1.15rem;
-  line-height: 1.7;
+  margin-bottom: 28px;
 }
 
 .game-description p {
-  margin-bottom: 18px;
-  color: #ffffff;
+  margin-bottom: 16px;
+  line-height: 1.7;
+  font-size: 16px;
 }
 
-
 /* =========================
-   Caixa de informações
+   INFO BOX
 ========================= */
 
 .game-info {
   background: rgba(20, 10, 45, 0.95);
-  padding: 24px;
-  border-radius: 16px;
-  margin: 30px 0;
-  border: 1px solid rgba(157, 92, 255, 0.35);
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.6);
+  padding: 22px;
+  border-radius: 14px;
+  margin: 28px 0;
 }
 
 .game-info h2 {
   color: #9d5cff;
   margin-bottom: 14px;
-  font-size: 1.5rem;
+  font-size: 20px;
 }
 
 .game-info ul {
@@ -82,34 +71,30 @@
 }
 
 .game-info li {
-  margin-bottom: 10px;
-  font-size: 1.05rem;
-  color: #ffffff;
+  margin-bottom: 8px;
+  font-size: 15px;
 }
 
-
 /* =========================
-   Vídeo responsivo
+   VIDEO RESPONSIVO
 ========================= */
 
 .game-video {
-  margin: 34px 0;
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-}
-
-.game-video iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  margin: 36px 0;
   border-radius: 14px;
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
 }
 
+/* iframe responsivo */
+.game-video iframe {
+  width: 100%;
+  height: 480px;
+  border: none;
+  display: block;
+}
 
 /* =========================
-   Ações / Botões
+   BOTÃO / AÇÕES
 ========================= */
 
 .game-actions {
@@ -119,24 +104,21 @@
 
 .game-actions .btn {
   display: inline-block;
-  padding: 14px 30px;
+  padding: 14px 28px;
   border-radius: 10px;
   background: linear-gradient(45deg, #5a00ff, #8f5cff);
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.1rem;
-  border: none;
-  transition: 0.25s;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  font-size: 16px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .game-actions .btn:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.1);
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
-
 
 /* =========================
    TABLET
@@ -145,85 +127,94 @@
 @media (max-width: 768px) {
 
   .games {
-    padding: 18px;
+    padding: 22px;
   }
 
   .games h1 {
-    font-size: 1.9rem;
+    font-size: 26px;
+    margin-bottom: 22px;
   }
 
-  .game-description {
-    font-size: 1.05rem;
-  }
-
-  .game-info {
-    padding: 18px;
+  .game-video iframe {
+    height: 360px;
   }
 
 }
 
-
 /* =========================
-   MOBILE
+   MOBILE UX MELHORADA
 ========================= */
 
 @media (max-width: 480px) {
 
   .games {
-    padding: 14px;
+    padding: 16px;
   }
 
   .games h1 {
-    font-size: 1.6rem;
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  /* ritmo vertical consistente */
+  .game-hero {
+    margin-bottom: 20px;
   }
 
   .game-description {
-    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .game-description p {
+    font-size: 15px;
+    line-height: 1.6;
   }
 
   .game-info {
     padding: 16px;
+    margin: 20px 0;
   }
 
   .game-info h2 {
-    font-size: 1.3rem;
+    font-size: 18px;
+  }
+
+  .game-info li {
+    font-size: 14px;
+  }
+
+  /* vídeo não cortar + bom respiro */
+  .game-video {
+    margin: 28px 0 36px 0;
+  }
+
+  .game-video iframe {
+    height: 220px;
+  }
+
+  /* botão touch-friendly */
+  .game-actions {
+    margin-top: 24px;
   }
 
   .game-actions .btn {
+    display: block;
     width: 100%;
-    font-size: 1rem;
-    padding: 14px;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 12px;
   }
 
 }
-
 
 /* =========================
    TELAS MUITO PEQUENAS
 ========================= */
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
 
-  .games {
-    padding: 10px;
-  }
-
-  .games h1 {
-    font-size: 1.4rem;
+  .game-video iframe {
+    height: 190px;
   }
 
 }
-/* Correção de sobreposição no mobile */
-
-@media (max-width: 480px) {
-
-  .game-video {
-    margin-bottom: 36px;
-  }
-
-  .game-actions {
-    padding-top: 10px;
-  }
-
-}
-
